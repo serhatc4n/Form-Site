@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form ve Elemanları</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 
+        - adı *
+        - telefon *
+        - mail *
+        -mesaj 
+        - yaşadığı şehir
+        -cinsiyet
+
+        reset ve submit POST: https://httpbin.org/post
+
+     -->
+
+    <form action="https://httpbin.org/post" method="POST">
+        <div class="form-row">
+            <label for="isim">Adı</label>
+            <input name="adi" id="isim" type="text" required placeholder="Serhat Can">
+        </div>
+
+        <div class="form-row">
+            <label for="tel">Telefon</label>
+            <input name="adi" id="tel" type="tel" required>
+        </div>
+
+        <div class="form-row">
+            <label for="email">E-mail</label>
+            <input name="email" id="email" type="email" required>
+        </div>
+
+        <div class="form-row">
+            <label for="mesaj">Mesaj</label>
+            <textarea name="mesaj" id="mesaj" rows="3" required></textarea>
+        </div>
+
+        <div class="form-row">
+            <label for="sehir">Şehir</label>
+            <select name="sehir" id="sehir">
+                <option name="Seçiniz" value="">Seçiniz</option>
+                <option name="İstanbul" value="34">İstanbul</option>
+                <option name="İzmir" value="35">İzmir</option>
+                <option name="Ankara" value="06">Ankara</option>
+
+            </select>
+        </div>
+
+        <div class="form-row">
+            <p>Sevdiğiniz renk</p>
+            <div class="radio-container">
+            <label>
+                <input type="radio" name="renk" value="kirmizi" checked>
+                Kırmızı
+            </label>
+            <label>
+                <input type="radio" name="renk" value="mavi" >
+                Mavi
+            </label>
+            <label>
+                <input type="radio" name="renk" value="yesil" >
+                Yeşil
+            </label>
+        </div>
+        </div>
+
+        <div class="form-row">
+            <button class="primary" type="submit">Gönder</button>
+            <button type="reset">Sıfırla</button>
+        </div>
+
+    </form>
+</body>
+
+</html>
